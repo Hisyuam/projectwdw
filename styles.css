@@ -1,0 +1,238 @@
+.pagination .page-link {
+  color: #000000; /* Warna teks hitam */
+  background-color: #ffffff; /* Warna latar putih */
+  border-color: #ffffff; /* Border putih sama dengan latar */
+}
+
+.pagination .page-link:hover {
+  color: #000000; /* Warna teks hitam saat hover */
+  background-color: #f5f5f5; /* Warna latar putih lebih terang saat hover */
+  border-color: #f5f5f5; /* Border putih lebih terang */
+}
+
+.pagination .page-item.active .page-link {
+  color: #ffffff; /* Warna teks tombol aktif */
+  background-color: #333333; /* Warna latar hitam gelap untuk tombol aktif */
+  border-color: #ffffff; /* Border putih */
+}
+
+.pagination .page-link[aria-disabled="true"] {
+  color: #cccccc; /* Warna teks tombol disabled */
+  background-color: #f5f5f5; /* Warna latar putih lebih terang untuk disabled */
+  border-color: #ffffff; /* Border putih */
+}
+
+#SearchForm {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%; /* Adjust width as needed */
+  background-color: antiquewhite;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 400ms ease, left 400ms ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hover Effect for Navbar Brand Logo */
+.navbar-brand {
+  position: relative;
+}
+
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 400ms ease, left 400ms ease;
+}
+
+.navbar-brand:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+header {
+  background-image: url("img/img2/richard-ciraulo-BlI3VVVfP3Y-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+header .container {
+  position: relative;
+  z-index: 1;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+
+#hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Untuk memusatkan gambar */
+}
+
+#hero {
+  position: relative;
+}
+
+#hero img {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Batas tinggi gambar */
+  object-fit: cover; /* Pangkas gambar agar tetap proporsional */
+  box-shadow: #000000;
+}
+
+#hero .container {
+  position: absolute; /* Agar berada di atas gambar */
+  top: 40%; /* Posisikan di tengah secara vertikal */
+  left: 70%; /* Posisikan di tengah secara horizontal */
+  transform: translate(-50%, -50%); /* Koreksi pergeseran */
+  z-index: 10; /* Teks muncul di atas gambar */
+  color: rgb(255, 255, 255); /* Ubah warna teks agar terlihat */
+  text-align: center; /* Pusatkan teks */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.7); /* Efek bayangan */
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hilangkan scroll horizontal */
+}
+
+@media (max-width: 768px) {
+  #hero img {
+    width: 80%; /* Ukuran gambar untuk layar kecil */
+  }
+}
+
+
+#ShopItem01 {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width as needed */
+  background-color: rgb(240, 240, 239);
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  transition: width 400ms ease, left 400ms ease;
+}
+
+#ShopItem02 {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width as needed */
+  background-color: rgb(240, 240, 239);
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  transition: width 400ms ease, left 400ms ease;
+}
+
+
+#ShopItem03{
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width as needed */
+  background-color: rgb(240, 240, 239);
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  transition: width 400ms ease, left 400ms ease;
+}
+
+
+#ShopItem04 {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width as needed */
+  background-color: rgb(240, 240, 239);
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  transition: width 400ms ease, left 400ms ease;
+}
+
+
+#ShopItem05 {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width as needed */
+  background-color: rgb(240, 240, 239);
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  transition: width 400ms ease, left 400ms ease;
+}
+
+
+#ShopItem06 {
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width as needed */
+  background-color: rgb(240, 240, 239);
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hidden */
+  transition: width 400ms ease, left 400ms ease;
+}
+
+

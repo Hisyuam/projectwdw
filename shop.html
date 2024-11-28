@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepatuku</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: antiquewhite">
+      <div class="container-fluid">
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="img/img2/logo-color.png" alt="Sepatuku Logo" width="48" height="31" class="d-inline-block align-text-center" />
+          <strong>Sepatuku</strong>
+        </a>
+
+        <!-- Toggler for smaller screens -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="#" onclick="toggleSearchForm(event)">
+                <img src="img/img2/search.svg" alt="Search" width="30" height="30" class="d-inline-block align-text-center fa-bold" />
+              </a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="shop.html">
+                <img src="img/img2/bag.svg" alt="Shopping Cart" width="30" height="30" class="d-inline-block align-text-center fa-bold" />
+              </a>
+            </li>
+
+            <li class="nav-item me-4">
+              <a class="nav-link active" href="index1.html">
+                <img src="img/img2/profile.svg" alt="User Signup" width="30" height="30" class="d-inline-block align-text-center fa-bold" />
+              </a>
+            </li>
+          </ul>
+
+          <!-- Search Form -->
+          <div class="shadow" id="SearchForm" style="display: none">
+            <form class="d-flex ms-lg-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <button class="btn btn-outline" type="submit" style="border: 1px solid black">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="my-5">
+      <div class="container" style="padding: 50px">
+        <!--Section: Content-->
+        <section class="text-center">
+          <h4 class="mb-5"><strong>Latest Products</strong></h4>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="img/img/ian-bevis-IJjfPInzmdk-unsplash.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask">
+                      <h5><span class="badge bg-dark ms-2">NEW</span></h5>
+                    </div>
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Suede</h4>
+                  <p class="card-text">Rp 1.299.000</p>
+                  <a href="#" class="btn btn-dark" data-mdb-ripple-init onclick="toggleShopItem01(event)">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="img/img/hemesh-patil-Kv1GtuqBVIY-unsplash.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask">
+                      <h5><span class="badge bg-dark ms-2">ECO</span></h5>
+                    </div>
+                    <div class="mask border-1" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">SB Dusk Pastel High</h4>
+                  <p class="card-text">Rp 1.299.000</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init onclick="toggleShopItem02(event)">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="img/img/andres-jasso-PqbL_mxmaUE-unsplash.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask">
+                      <h5>
+                        <span class="badge bg-dark ms-2">BESTSELLER</span>
+                      </h5>
+                    </div>
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Force 1 'Shadow Edition'</h5>
+                  <p class="card-text">Rp 3.499.000</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init onclick="toggleShopItem03(event)">Read</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="img/img/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">Cali Star Trainers</h4>
+                  <p class="card-text">Rp 2.899.000</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init onclick="toggleShopItem04(event)">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="img/img/karsten-winegeart-JEChDyvo22c-unsplash.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">1 Low OG "Olive Green"</h5>
+                  <p class="card-text">Rp 3.100.000</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init onclick="toggleShopItem05(event)">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="img/img/thomas-serer-Jq3IXFoEeUU-unsplash.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">EQ Flex Shadow Knit</h5>
+                  <p class="card-text">Rp 2.100.000</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init onclick="toggleShopItem06(event)">Read</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Post title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init>Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="https://mdbootstrap.com/img/new/standard/nature/023.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Post title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init>Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="card">
+                <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                  <img src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" class="img-fluid" />
+                  <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Post title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#!" class="btn btn-dark" data-mdb-ripple-init>Read</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Section: Content-->
+
+        <!--Pop Up Shop -->
+        <!--Item01-->
+        <section>
+          <div class="container shadow" id="ShopItem01" style="display: none">
+            <div class="container overflow-hidden text-center">
+              <div class="row gx-5">
+                <div class="col">
+                  <div class="p-3">
+                    <img src="img/img/ian-bevis-IJjfPInzmdk-unsplash.jpg" width="500px" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3" style="text-align: left">
+                    <h5>SUEDE</h5>
+                    <p>
+                      Deskripsi:<br />
+                      SEPATUKU - Suede adalah sepatu klasik yang telah menjadi ikon selama bertahun-tahun. Sepatu ini terbuat dari bahan suede yang lembut dan nyaman, dengan aksen putih yang kontras. Sepatu ini memiliki desain yang simpel
+                      namun elegan, dan cocok untuk berbagai gaya.
+                    </p>
+
+                    <p>Size:</p>
+
+                    <!--Checkradio-->
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">37</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">38</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">39</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">40</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">41</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">42</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">43</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">44</label>
+                    </div>
+
+                    <p>Harga: Rp 1.299.000</p>
+                  </div>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Add to Chart</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Item02-->
+        <section>
+          <div class="container shadow" id="ShopItem02" style="display: none">
+            <div class="container overflow-hidden text-center">
+              <div class="row gx-5">
+                <div class="col">
+                  <div class="p-3">
+                    <img src="img/img/hemesh-patil-Kv1GtuqBVIY-unsplash.jpg" width="500px" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3" style="text-align: left">
+                    <h5>SB Dusk Pastel High</h5>
+                    <p>
+                      Deskripsi:<br />
+                      Nike SB Dusk Pastel High menggabungkan warna pastel yang menenangkan dengan gaya kasual dan artistik. Dilengkapi panel suede premium dalam krem, biru muda, peach, dan abu-abu, serta sol gum yang tahan lama. Logo Swoosh
+                      hitam dan tali sepatu hijau zaitun serta biru muda menambah sentuhan kontras dan personal.
+                    </p>
+
+                    <p>Size:</p>
+
+                    <!--Checkradio-->
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">37</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">38</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">39</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">40</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">41</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">42</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">43</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">44</label>
+                    </div>
+
+                    <p>Harga: Rp 1.299.000</p>
+                  </div>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Add to Chart</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Item03-->
+        <section>
+          <div class="container shadow" id="ShopItem03" style="display: none">
+            <div class="container overflow-hidden text-center">
+              <div class="row gx-5">
+                <div class="col">
+                  <div class="p-3">
+                    <img src="img/img/andres-jasso-PqbL_mxmaUE-unsplash.jpg" width="500px" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3" style="text-align: left">
+                    <h5>SB Dusk Pastel High</h5>
+                    <p>
+                      Deskripsi:<br />
+                      Force 1 'Shadow Edition' adalah pilihan sempurna bagi Anda yang mencari sepatu sneaker klasik dengan sentuhan modern. Desainnya yang minimalis, dengan kombinasi warna hitam dan putih, memberikan tampilan yang timeless
+                      dan serbaguna. Upper berbahan kulit sintetis berkualitas tinggi memberikan kenyamanan dan daya tahan yang luar biasa.
+                    </p>
+
+                    <p>Size:</p>
+
+                    <!--Checkradio-->
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">37</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">38</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">39</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">40</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">41</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">42</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">43</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">44</label>
+                    </div>
+
+                    <p>Harga: Rp 3.499.000</p>
+                  </div>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Add to Chart</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Item04-->
+        <section>
+          <div class="container shadow" id="ShopItem04" style="display: none">
+            <div class="container overflow-hidden text-center">
+              <div class="row gx-5">
+                <div class="col">
+                  <div class="p-3">
+                    <img src="img/img/trendest-studio-XZ3EmAIWuz0-unsplash.jpg" width="500px" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3" style="text-align: left">
+                    <h5>Force 1 'Shadow Edition'</h5>
+                    <p>
+                      Deskripsi:<br />
+                      Cali Star Trainers adalah pilihan yang sempurna untuk pria yang ingin tampil stylish dan sporty. Sepatu ini memiliki desain yang simpel namun elegan, dengan warna putih yang bersih dan aksen hitam yang kontras. Solnya
+                      yang empuk dan ringan membuat sepatu ini nyaman dipakai seharian, sementara bahannya yang berkualitas tinggi memastikan sepatu ini tahan lama.
+                    </p>
+
+                    <p>Size:</p>
+
+                    <!--Checkradio-->
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">37</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">38</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">39</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">40</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">41</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">42</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">43</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">44</label>
+                    </div>
+
+                    <p>Harga: Rp 2.899.000</p>
+                  </div>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Add to Chart</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Item05-->
+        <section>
+          <div class="container shadow" id="ShopItem05" style="display: none">
+            <div class="container overflow-hidden text-center">
+              <div class="row gx-5">
+                <div class="col">
+                  <div class="p-3">
+                    <img src="img/img/karsten-winegeart-JEChDyvo22c-unsplash.jpg" width="500px" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3" style="text-align: left">
+                    <h5>1 Low OG "Olive Green"</h5>
+                    <p>
+                      Deskripsi:<br />
+                      1 Low OG "Olive Green" adalah sepatu sneaker yang menggabungkan gaya klasik dengan sentuhan modern. Sepatu ini memiliki kombinasi warna yang menarik, dengan bagian atas yang didominasi oleh warna putih dan hitam, serta
+                      aksen hijau zaitun pada logo Swoosh di sisi sepatu. Sepatu ini dirancang untuk kenyamanan dan gaya, cocok untuk berbagai kesempatan, baik untuk aktivitas sehari-hari maupun untuk koleksi sneakerhead.
+                    </p>
+
+                    <p>Size:</p>
+
+                    <!--Checkradio-->
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">37</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">38</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">39</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">40</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">41</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">42</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">43</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">44</label>
+                    </div>
+
+                    <p>Harga: Rp 3.100.000</p>
+                  </div>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Add to Chart</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--Item06-->
+        <section>
+          <div class="container shadow" id="ShopItem06" style="display: none">
+            <div class="container overflow-hidden text-center">
+              <div class="row gx-5">
+                <div class="col">
+                  <div class="p-3">
+                    <img src="img/img/thomas-serer-Jq3IXFoEeUU-unsplash.jpg" width="500px" class="img-fluid" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-3" style="text-align: left">
+                    <h5>Adidas EQ Flex</h5>
+                    <p>
+                      Deskripsi:<br />
+                      Maksimalkan gaya dan performa Anda dengan Adidas EQ Flex Shadow Knit, sepatu yang dirancang untuk memberikan kenyamanan tanpa mengorbankan estetika. Dengan desain knitted upper berwarna hitam dan putih, sepatu ini
+                      menawarkan tampilan modern dengan aksen geometris yang dinamis. Material primeknit-nya memberikan kelenturan maksimal, memastikan sirkulasi udara yang baik dan kenyamanan sepanjang hari.
+                    </p>
+
+                    <p>Size:</p>
+
+                    <!--Checkradio-->
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">37</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">38</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">39</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">40</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">41</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">42</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">43</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                      <label class="form-check-label" for="flexRadioDefault1">44</label>
+                    </div>
+
+                    <p>Harga: Rp 2.100.000</p>
+                  </div>
+                </div>
+                <div class="row align-items-end">
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Add to Chart</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-outline" type="submit" style="border: 1px solid black">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="my-4" aria-label="...">
+        <ul class="pagination pagination-circle justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">2 <span class="sr-only"></span></a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+    <!--Main layout-->
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <div>
+            <a class="btn btn-outline-dark btn-social mx-1" style="border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center" href="#!"><i class="bi bi-github"></i></a>
+            <a class="btn btn-outline-dark btn-social mx-1" style="border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center" href="#!"><i class="bi bi-facebook"></i></a>
+            <a class="btn btn-outline-dark btn-social mx-1" style="border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center" href="#!"><i class="bi bi-linkedin"></i></a>
+            <a class="btn btn-outline-dark btn-social mx-1" style="border-radius: 50%; width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center" href="https://www.instagram.com/_arhisyam/"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i>Sepatuku</h6>
+              <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Costumer Services</h6>
+              <p>
+                <a href="#!" class="text-reset">Help & Support</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">FAQ</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Terms & Conditions</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Privacy Policy</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Settings</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> South Jakarta, Indonesia</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                Sepatuku@shoestore.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="">Sepatuku</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
